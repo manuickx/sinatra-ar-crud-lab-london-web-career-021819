@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/articles/<%= @article.id %>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <p>Title: <input type="text" name="title" value="<%= @article.title %>" id="title"></p>
+      <p>Content: <input type="text" name="content" value="<%= @article.content %>" id="content"></p>
+      <input type="submit" value="submit">
+    </form>
+  </body>
+</html>
